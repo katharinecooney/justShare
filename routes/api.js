@@ -3,12 +3,12 @@
 const express = require('express');
 const router = express.Router();
 
-const Restaurants = require('../models/user');
+const User = require('../models/user');
 
 /* GET users listing. */
 router.get('/restaurants', function (req, res, next) {
-  Restaurants.find()
-    .then(restaurants => res.json(restaurants))
+  User.find()
+    .then(users => res.json(users))
     .catch(next);
 });
 

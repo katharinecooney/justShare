@@ -15,7 +15,7 @@ router.get('/new', (req, res, next) => {
 
 router.post('/new', parser.single('image'), (req, res, next) => {
   const { name, description, allergens, location, image } = req.body;
-  const user = mongoose.mongo.ObjectId(req.user.Id);
+  const user = (req.user.id);
   console.log('user', user);
   const newProduct = new Product({ name, description, allergens, location, image, user });
   newProduct.save()
