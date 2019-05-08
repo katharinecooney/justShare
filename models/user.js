@@ -6,12 +6,7 @@ const userSchema = new Schema({
   password: String,
   email: String,
   restaurant: String,
-  address: {
-    street: String,
-    number: String,
-    city: String
-  },
-  neighborhood: String,
+  address: String,
   location: {
     type: String,
     coordinates: [Schema.Types.Decimal128]

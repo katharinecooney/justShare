@@ -12,8 +12,9 @@
     <div class="item">
       
       <img class="product-image" src="{{this.image}}">
-      <h3>{{this.name}}</h3>
-      <span>{{this.description}}</span>
+			<h3>{{this.user.restaurant}}</h3>
+			<span>{{this.user.location}}</span>	
+      <span>Available: {{this.description}}</span>
       <span>Allergens: {{this.allergens}}</span>
       <div class="profile-button-container">
         <a class="profile-button edit-button" href="/product/edit?product_id={{this._id}}">Edit</a>
