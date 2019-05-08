@@ -13,13 +13,11 @@ router.get('/new', (req, res, next) => {
 
 // Add new product
 
-// Product.update({ _id: req.query.product_id }, { $set: { name, description, allergens, location } }, { new: true });
-
 router.post('/new', parser.single('image'), (req, res, next) => {
   const { name, description, allergens, location, image } = req.body;
   const user = (req.user.id);
   console.log('user', user);
-  const newProduct = new Product({ name, description, allergens, location, image, user }, { $set: { name, description, allergens, location } });
+  const newProduct = new Product({ name, description, allergens, location, image, user });
   newProduct.save()
     .then(product => res.redirect('/profile'))
     .catch(error => res.redirect('/new'));

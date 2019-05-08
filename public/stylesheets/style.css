@@ -41,13 +41,13 @@ nav {
 }
 
 #nav-links {
-  padding-right: 20px;
+  margin-right: 20px;
 }
 
 #nav-links a {
   text-decoration: none;
   color: white;
-  padding-left: 10px;
+  margin-left: 10px;
 }
 
 /*********************************** HOMEPAGE ***********************************/
@@ -206,7 +206,7 @@ h2 {
   margin-bottom: 10px;
 }
 /*********************************** ABOUTPAGE ***********************************/
-.about-page{
+/* .about-page{
   background:linear-gradient(rgba(2, 2, 0, 0.5), rgba(15, 19, 0, 0.401)), url('../images/bread.jpg') center / cover no-repeat;
   height: 100vh;
   display: flex;
@@ -245,7 +245,7 @@ h2 {
 .insidepart div {
   width: 50%;
   padding: 3%;
-}
+} */
 
 /********************** PROFILE ***********************/
 
