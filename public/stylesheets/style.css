@@ -12,18 +12,12 @@ body {
 a {
   color: #00B7FF;
 }
-.form-container h2 {
-  margin: 0 0 5px 0;
-}
 
-/************************ NAVBAR *************************/
+/************************************* NAVBAR **************************************/
 
 nav {
   height: 7vh;
-  min-height: 50px;
   background-color:rgb(5, 223, 197);
-  position: sticky;
-  top: 0;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -36,7 +30,6 @@ nav {
 
 #nav-logo {
   height: 5vh;
-  min-height: 30px;
   padding-right: 20px;
   padding-left: 20px;
 }
@@ -44,60 +37,39 @@ nav {
 #nav-brand {
   color: white;
   font-family: 'Pacifico', cursive;
-  font-size: 1.5rem;
-  text-decoration: none;
-}
-
-#nav-brand-container a {
-  text-decoration: none;
+  font-size: 1rem;
 }
 
 #nav-links {
   padding-right: 20px;
-  font-size: 1rem;
 }
 
 #nav-links a {
   text-decoration: none;
   color: white;
-  margin-left: 10px;
-  padding-bottom: 5px;
+  padding-left: 10px;
 }
 
-#nav-links a:hover {
-  border-bottom: 2px solid white;
-}
-
-/************************ HOMEPAGE ************************/
+/*********************************** HOMEPAGE ***********************************/
 
 main {
   color: white;
-  min-height: 93vh;
+  height: 93vh;
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
+  align-items: center;
+  /* background: linear-gradient(rgba(35, 119, 91, 0.472), rgba(15, 41, 47, 0.512)), url('../images/alexandr-podvalny-221880-unsplash.jpg') center / cover no-repeat; */
+  /* background: linear-gradient(rgba(34, 2, 70, 0.472), rgba(13, 0, 24, 0.512)), url('../images/bread.jpg') center / cover no-repeat; */
   background: linear-gradient(rgba(2, 2, 0, 0.437), rgba(15, 19, 0, 0.401)), url('../images/bread.jpg') center / cover no-repeat;
 }
 
-.main-content {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin-top: -60px;
-}
-
 .main-header {
-  font-size: 6rem;
+  font-size: 5rem;
   color: rgb(255, 255, 255);
   font-family: 'Pacifico', cursive;
   font-weight: 100;
-  margin: 0;
-  animation: tracking-in-contract 1.5s;
-}
-
-main .button-container {
-  padding-top: 40px;
+  margin-bottom: 0;
 }
 
 .button {
@@ -105,23 +77,14 @@ main .button-container {
   text-decoration: none;
   text-align: center;
   display: inline-block;
-  padding: 25px;
+  padding: 15px;
   width: 70px;
   background-color: rgb(5, 223, 197);
   border-radius: 15px;
   margin: 0 15px;
-  width: 125px;
-  font-size: 1rem;
-  transition: all 0.8s;
 }
 
-main .button:hover {
-  color: rgb(5, 223, 197);
-  box-shadow: inset  0px 0px 0px 3px  rgb(5, 223, 197);
-  background-color: white;
-}
-
-/*********************** SIGNUP ************************/
+/********************************* SIGNUP **********************************/
 
 .signup-page {
   height: 93vh;
@@ -131,11 +94,12 @@ main .button:hover {
   align-items: center;
 }
 
-.signup-page .form-container {
+.form-container {
   border-radius: 15px;
-  padding: 15px 25px;
+  padding: 15px 30px 30px 30px;
   color: white;
   width: 65vw;
+  height: 460px;
   max-width: 600px;
   border: 3px solid rgb(5, 223, 197);
   background: rgba(5, 223, 197, .9); 
@@ -144,188 +108,143 @@ main .button:hover {
 form {
   display: flex;
   flex-direction: column;
-  /* margin-top: 30px; */
+  margin-top: 30px;
 }
 
 form input {
-  margin-top: 10px;
   height: 30px;
   margin-bottom: 10px;
   text-align: center;
   text-transform: uppercase;
 }
 
-.form-button {
-  height: 40px;
+form button {
+  height: 30px;
   border-radius: 15px;
-  background-color: rgba(231, 216, 240, 0.712);
-  box-shadow: 2px 2px 2px rgb(4, 209, 175);
-  border: none;
-  color: white;
-  font-size: 1rem;
-  margin-top: 10px;
 }
 
 form p {
   margin-top: 30px;
 }
 
-/*********************** LOGIN ************************/
+/************* SHOW PRODUCTS **************/
 
-.login-page .form-container {
-  border-radius: 15px;
-  padding: 15px 25px;
-  color: white;
-  width: 65vw;
-  max-width: 600px;
-  border: 3px solid rgb(5, 223, 197);
-  background: rgba(5, 223, 197, .9); 
-}
-
-.login-page {
-  height: 93vh;
-  background: linear-gradient(rgba(22, 22, 22, 0.5), rgba(66, 66, 66, 0.5)),url('../images/lettuce.jpg') center / cover no-repeat ;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-/******************* ADD NEW ITEM ********************/
-
-.new-page .form-container {
-  border-radius: 15px;
-  padding: 15px 25px;
-  color: white;
-  width: 65vw;
-  max-width: 600px;
-  border: 3px solid rgb(5, 223, 197);
-  background: rgba(5, 223, 197, .9); 
-}
-
-.new-page {
-  min-height: 93vh;
-  background: linear-gradient(rgba(22, 22, 22, 0.5), rgba(66, 66, 66, 0.5)),url('../images/lettuce.jpg') center / cover no-repeat ;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-/********************** PROFILE ***********************/
-
-.welcome-message {
-  font-size: 3rem;
-  text-align: center;
-}
-
-.new-button {
-  font-size: 1rem;
-  width: 180px;
-  padding: 30px 40px;
-  background-color: rgb(241, 128, 41);
-  transition: all 0.8s;
-}
-
-.new-button:hover {
- color: rgb(241, 128, 41);
- background-color: white;
- box-shadow: inset  0px 0px 0px 3px  rgb(241, 128, 41);
-
-}
-
-.profile-page {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  min-height: 93vh;
-}
-
-.profile-page h3 {
-  margin: 4px 0;
-  font-size: 1.5rem;
-  text-transform: capitalize;
-}
-
-.profile-info {
+.showProducts{
+  background:linear-gradient(rgba(2, 2, 0, 0.5), rgba(15, 19, 0, 0.401)), url('../images/bread.jpg') center / cover no-repeat;
+  height: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding-bottom: 80px;
+  justify-items: center;
 }
-
-.profile-products-container {
-  background: rgba(221, 219, 219, 0.198);
-  padding-top: 20px;
+@media (min-width: 900px) {
+  .showProducts{
+    height: 100vh;
+  }
 }
-
-.profile-products {
+.content{
+  background-color: rgb(245,245,245,0.8);
+  width: 90%;
+  height: 90%;
+  margin: 40px;
   display: flex;
+  position: relative;
+  flex-direction: column;
+  justify-items: center;
+  align-items: center;
+  z-index: 1; 
+  border-radius: 2%; 
+}
+h2 {
+  color: rgb(95, 81, 81);
+  border-bottom: 2px solid  rgb(5, 223, 197);
+  width: 280px;
+  font-size: 25px;
+  position: relative;
+  top:10px;
+  margin-bottom: 10px;
+}
+.display{
+  width:100%;
+  height: 100%;
+  margin-top: 10px;
+  display: flex;
+  flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-around;
-  padding: 0 10px;
 }
 
-.item {
-  border: 1px solid rgb(241, 128, 41);
-  /* background-color: orange; */
-  width: 30%;
-  box-sizing: border-box;
-  min-width: 300px; 
+.display figure {
+	margin:15px 10px;
+  width: 250px;
+  height: 250px;
+	text-align: center;
+}
+
+.display figure img{
+	border: 1px solid white;
+  width: 200px;
+  height: 150px;
+	box-shadow:gray 5px 5px 10px;
+  border-radius: 10%;
+  margin-bottom: 5px;
+} 
+
+.display figcaption {
+  margin: 5px;
+  height: 100px;
   display: flex;
   flex-direction: column;
-  margin-bottom: 20px;
-  padding: 10px;
-  text-align: center;
+  text-align: left;
+  padding-left: 25px;
+  color: rgb(95, 81, 81);
 }
-
-.profile-products-heading {
-  text-align: center;
-  text-transform: uppercase;
-  /* letter-spacing: 15px; */
+.display p{
+  margin: 5px 5px 5px 0px;
 }
-
-.product-image {
-  width: 95%;
-  height: 200px;
-  margin: 0 auto;
-  border-radius: 10% / 10%;
+.showProducts .button-container{
+  margin-bottom: 10px;
 }
-
-.profile-button-container {
+/*********************************** ABOUTPAGE ***********************************/
+.about-page{
+  background:linear-gradient(rgba(2, 2, 0, 0.5), rgba(15, 19, 0, 0.401)), url('../images/bread.jpg') center / cover no-repeat;
+  height: 100vh;
   display: flex;
-  justify-content: space-around;
-  padding: 15px 0 5px;
-  /* border-top: 1px solid black; */
+  flex-direction: column;
+  align-items: center;
+  justify-items: center;
 }
 
-.profile-button {
-  padding: 15px 0;
-  width: 45%;
-  color: white;
-  text-decoration: none;
-  text-align: center;
-  border-radius: 15px;
+.textContainer{
+  background-color: rgb(245,245,245,0.8);
+  width: 80%;
+  height: 80%;
+  margin: 40px;
+  padding: 0px 50px;
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 1; 
+  border-radius: 2%; 
 }
-
-.edit-button {
-  background-color: #05DFC5;
-  transition: all 0.8s;
+.outerpart {
+  margin: 0;
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  justify-items: center;
+  padding-bottom: 30px;
 }
-
-.edit-button:hover {
-  color: rgb(5, 223, 197);
-  box-shadow: inset  0px 0px 0px 3px  rgb(5, 223, 197);
-  background-color: white;
+.insidepart {
+  display: flex;
+  position: relative;
+  flex-direction: row;
 }
-
-.delete-button {
-  background-color: #00AADD;
-  transition: all 0.8s;
-}
-
-.delete-button:hover {
-  color: #00AADD;
-  box-shadow: inset  0px 0px 0px 3px #00AADD;
-  background-color: white;
+.insidepart div {
+  width: 50%;
+  padding: 3%;
 }
 
 /********************** PROFILE ***********************/
@@ -339,242 +258,29 @@ form p {
   height: 93vh;
   background: linear-gradient(rgba(22, 22, 22, 0.5), rgba(66, 66, 66, 0.5)),url('../images/markus-spiske-139525-unsplash.jpg') center / cover no-repeat ;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  position: relative;
+  flex-direction: column;
+  margin-top: 10px;
+
 }
 
-.edit-page .form-container {
-  border-radius: 15px;
-  padding: 15px 25px;
-  color: white;
-  width: 65vw;
-  max-width: 600px;
-  border: 3px solid rgb(5, 223, 197);
-  background: rgba(5, 223, 197, .9); 
-}
-
-/************ EXTRA SMALL MEDIA QUERIES *************/
-
-@media(max-width:767px){
-  #nav-brand {
-    font-size: .75rem;
+h3 {
+    color: rgb(95, 81, 81);
+    position: relative;
+    top:10px;
+    margin-bottom: 10px;
+    font-size: 40px;
   }
-  
-  #nav-links {
-    font-size: .75rem;
-  }
-
-  .main-header {
-    font-size: 4rem;
-  }
-
-  .button {
-    margin-bottom: 15px;
-  }
-
-  main .button-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 100vw;
-    padding-top: 20px;
-  }
-
-  .item {
-    width: 90%; 
-    max-width: 400px;
-  }
-  
-  .product-image {
-    width: 100%;
-    height: 300px;
-    margin: 0 auto;
-  }
-}
-
-
-/************ MEDIUM MEDIA QUERIES *************/
-
-@media(min-width:768px){
-  #nav-brand {
-    font-size: 1rem;
-  }
-  
-  #nav-links {
-    font-size: 1rem;
-  }
-
-  .main-header {
-    font-size: 6rem;
-  }
-
-  main .button-container {
-    display: flex;
-    justify-content: center;
-    width: 100vw;
-  }
-
-  div.item {
-    width: 45%; 
-    max-width: 400px;
-  }
-  
-  .product-image {
-    width: 100%;
-    height: 300px;
-    margin: 0 auto;
-  }
-}
-
-/************ LARGE MEDIA QUERIES *************/
-
-@media(min-width:992px){
-  #nav-brand {
-    font-size: 1.25rem;
-  }
-  
-  #nav-links a {
-    padding-left: 30px;
-    font-size: 1rem;
-  }
-
-  /* .main-header {
-    font-size: 5rem;
-  } */
-
-  /* .button {
-    margin-bottom: 15px;
-    font-size: 1.25rem;
-    width: 175px;
-  } */
-
-  main .button-container {
-    display: flex;
-    justify-content: center;
-    width: 100vw;
-  }
-
-  div.item {
-    width: 45%; 
-    max-width: 400px;
-  }
-  
-  .product-image {
-    width: 100%;
-    height: 300px;
-    margin: 0 auto;
-  }
-
-  .signup-page .form-container {
-    width: 65vw;
-   }
-
-   .login-page .form-container {
-    width: 65vw;
-   }
-
-   .new-page .form-container {
-    width: 65vw;
-   }
-
-   form input {
-    height: 40px;
-  }
-
-  .new-button {
+.about-us > h3{
+    padding-top: 50px;
+    border-bottom: 3px solid  rgb(5, 223, 197);
+    padding-bottom: 20px;    
     width: 200px;
-  }
 }
 
-/************ EXTRA LARGE MEDIA QUERIES *************/
-
-@media(min-width:1200px){
-
-}
-
-
-
- @-webkit-keyframes slide-fwd-center {
-  0% {
-    -webkit-transform: translateZ(0);
-            transform: translateZ(0);
-  }
-  100% {
-    -webkit-transform: translateZ(160px);
-            transform: translateZ(160px);
-  }
-}
-@keyframes slide-fwd-center {
-  0% {
-    -webkit-transform: translateZ(0);
-            transform: translateZ(0);
-  }
-  100% {
-    -webkit-transform: translateZ(160px);
-            transform: translateZ(160px);
-  }
-}
-
-
-
-
-@-webkit-keyframes tracking-in-expand-fwd {
-  0% {
-    letter-spacing: -0.5em;
-    -webkit-transform: translateZ(-700px);
-            transform: translateZ(-700px);
-    opacity: 0;
-  }
-  40% {
-    opacity: 0.6;
-  }
-  100% {
-    -webkit-transform: translateZ(0);
-            transform: translateZ(0);
-    opacity: 1;
-  }
-}
-
-@keyframes tracking-in-expand-fwd {
-  0% {
-    letter-spacing: -0.5em;
-    -webkit-transform: translateZ(-700px);
-            transform: translateZ(-700px);
-    opacity: 0;
-  }
-  40% {
-    opacity: 0.6;
-  }
-  100% {
-    -webkit-transform: translateZ(0);
-            transform: translateZ(0);
-    opacity: 1;
-  }
-}
-
-@-webkit-keyframes tracking-in-contract {
-  0% {
-    letter-spacing: 1em;
-    opacity: 0;
-  }
-  40% {
-    opacity: 0.6;
-  }
-  100% {
-    letter-spacing: normal;
-    opacity: 1;
-  }
-}
-@keyframes tracking-in-contract {
-  0% {
-    letter-spacing: 1em;
-    opacity: 0;
-  }
-  40% {
-    opacity: 0.6;
-  }
-  100% {
-    letter-spacing: normal;
-    opacity: 1;
-  }
+p {
+  margin: 0px;
+  color: rgb(95, 81, 81);
+  padding-top:40px;
+  font-size: 13px;
 }
