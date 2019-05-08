@@ -17,7 +17,7 @@ const userSchema = new Schema({
     coordinates: [Schema.Types.Decimal128]
   }
 }, {
-  timestamps: { 
+  timestamps: {
     createdAt: 'created_at',
     updatedAt: 'updated_at'
   }

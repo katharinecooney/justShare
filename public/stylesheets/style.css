@@ -13,11 +13,14 @@ a {
   color: #00B7FF;
 }
 
-/************************************* NAVBAR **************************************/
+/************************ NAVBAR *************************/
 
 nav {
   height: 7vh;
+  min-height: 40px;
   background-color:rgb(5, 223, 197);
+  position: sticky;
+  top: 0;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -30,6 +33,7 @@ nav {
 
 #nav-logo {
   height: 5vh;
+  min-height: 30px;
   padding-right: 20px;
   padding-left: 20px;
 }
@@ -37,11 +41,17 @@ nav {
 #nav-brand {
   color: white;
   font-family: 'Pacifico', cursive;
-  font-size: 1rem;
+  font-size: 1.5rem;
+  text-decoration: none;
+}
+
+#nav-brand-container a {
+  text-decoration: none;
 }
 
 #nav-links {
   padding-right: 20px;
+  font-size: 1rem;
 }
 
 #nav-links a {
@@ -50,26 +60,34 @@ nav {
   padding-left: 10px;
 }
 
-/*********************************** HOMEPAGE ***********************************/
+/************************ HOMEPAGE ************************/
 
 main {
   color: white;
   height: 93vh;
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
-  /* background: linear-gradient(rgba(35, 119, 91, 0.472), rgba(15, 41, 47, 0.512)), url('../images/alexandr-podvalny-221880-unsplash.jpg') center / cover no-repeat; */
-  /* background: linear-gradient(rgba(34, 2, 70, 0.472), rgba(13, 0, 24, 0.512)), url('../images/bread.jpg') center / cover no-repeat; */
   background: linear-gradient(rgba(2, 2, 0, 0.437), rgba(15, 19, 0, 0.401)), url('../images/bread.jpg') center / cover no-repeat;
 }
 
+.main-content {
+  margin-top: 200px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 .main-header {
-  font-size: 5rem;
+  font-size: 6rem;
   color: rgb(255, 255, 255);
   font-family: 'Pacifico', cursive;
   font-weight: 100;
   margin-bottom: 0;
+}
+
+main .button-container {
+  margin-top: 20px;
 }
 
 .button {
@@ -77,14 +95,16 @@ main {
   text-decoration: none;
   text-align: center;
   display: inline-block;
-  padding: 15px;
+  padding: 25px;
   width: 70px;
   background-color: rgb(5, 223, 197);
   border-radius: 15px;
   margin: 0 15px;
+  width: 125px;
+  font-size: 1rem;
 }
 
-/********************************* SIGNUP **********************************/
+/*********************** SIGNUP ************************/
 
 .signup-page {
   height: 93vh;
@@ -94,12 +114,12 @@ main {
   align-items: center;
 }
 
-.form-container {
+.signup-page .form-container {
   border-radius: 15px;
   padding: 15px 30px 30px 30px;
   color: white;
   width: 65vw;
-  height: 460px;
+  height: 490px;
   max-width: 600px;
   border: 3px solid rgb(5, 223, 197);
   background: rgba(5, 223, 197, .9); 
@@ -108,26 +128,44 @@ main {
 form {
   display: flex;
   flex-direction: column;
-  margin-top: 30px;
+  /* margin-top: 30px; */
 }
 
 form input {
+  margin-top: 10px;
   height: 30px;
   margin-bottom: 10px;
   text-align: center;
   text-transform: uppercase;
 }
 
-form button {
-  height: 30px;
+.form-button {
+  height: 40px;
   border-radius: 15px;
+  background-color: rgba(231, 216, 240, 0.712);
+  box-shadow: 2px 2px 2px rgb(4, 209, 175);
+  border: none;
+  color: white;
+  font-size: 1rem;
+  margin-top: 10px;
 }
 
 form p {
   margin-top: 30px;
 }
 
-/********************************* LOGIN **********************************/
+/*********************** LOGIN ************************/
+
+.login-page .form-container {
+  border-radius: 15px;
+  padding: 15px 30px 30px 30px;
+  color: white;
+  width: 65vw;
+  height: 490px;
+  max-width: 600px;
+  border: 3px solid rgb(5, 223, 197);
+  background: rgba(5, 223, 197, .9); 
+}
 
 .login-page {
   height: 93vh;
@@ -141,4 +179,283 @@ form p {
   height: 225px;
 }
 
-/********************************* LOGIN **********************************/
+/******************* ADD NEW ITEM ********************/
+
+.new-page .form-container {
+  border-radius: 15px;
+  padding: 15px 30px 30px 30px;
+  color: white;
+  width: 65vw;
+  height: 490px;
+  max-width: 600px;
+  border: 3px solid rgb(5, 223, 197);
+  background: rgba(5, 223, 197, .9); 
+}
+
+.new-page {
+  height: 93vh;
+  background: linear-gradient(rgba(22, 22, 22, 0.5), rgba(66, 66, 66, 0.5)),url('../images/lettuce.jpg') center / cover no-repeat ;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.new-page .form-container {
+  height: 420px;
+}
+
+/********************** PROFILE ***********************/
+
+.welcome-message {
+  font-size: 3rem;
+  text-align: center;
+}
+
+.new-button {
+  font-size: 1rem;
+  width: 180px;
+  padding: 30px 40px;
+  background-color: rgb(241, 128, 41);
+}
+
+.profile-page {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 93vh;
+}
+
+.profile-page h3 {
+  margin: 4px 0;
+  font-size: 1.5rem;
+}
+
+.profile-info {
+  display: flex;
+  flex-direction: column;
+  /* justify-content: center; */
+  align-items: center;
+  /* height: 300px */
+
+  padding-bottom: 80px;
+}
+
+.profile-products-container {
+  background: rgba(221, 219, 219, 0.198);
+  /* margin-top: 80px; */
+  padding-top: 20px;
+}
+
+.profile-products {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  padding: 0 10px;
+}
+
+.item {
+  border: 1px solid rgb(241, 128, 41);
+  width: 30%;
+  box-sizing: border-box;
+  min-width: 300px; 
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+  padding: 10px;
+  text-align: center;
+}
+
+.profile-products-heading {
+  text-align: center;
+}
+
+.product-image {
+  width: 95%;
+  height: 200px;
+  margin: 0 auto;
+}
+
+.profile-button-container {
+  display: flex;
+  justify-content: space-around;
+  padding: 15px 0 5px;
+  /* border-top: 1px solid black; */
+}
+
+.profile-button {
+  padding: 15px 0;
+  width: 45%;
+  color: white;
+  text-decoration: none;
+  text-align: center;
+  border-radius: 15px;
+}
+
+.edit-button {
+  background-color: #05DFC5
+}
+
+.delete-button {
+  background-color: #00AADD
+}
+
+/********************* EDIT FORM **********************/
+
+.edit-page {
+  height: 93vh;
+  background: linear-gradient(rgba(22, 22, 22, 0.5), rgba(66, 66, 66, 0.5)),url('../images/markus-spiske-139525-unsplash.jpg') center / cover no-repeat ;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.edit-page .form-container {
+  height: 425px;
+}
+
+/************ EXTRA SMALL MEDIA QUERIES *************/
+
+@media(max-width:767px){
+  #nav-brand {
+    font-size: .75rem;
+  }
+  
+  #nav-links {
+    font-size: .75rem;
+  }
+
+  .main-header {
+    font-size: 4rem;
+  }
+
+  .button {
+    margin-bottom: 15px;
+  }
+
+  .main-content {
+    margin-top: 100px;
+  }
+
+  main .button-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100vw;
+  }
+
+  .item {
+    width: 90%; 
+  }
+  
+  .product-image {
+    width: 100%;
+    height: 300px;
+    margin: 0 auto;
+  }
+}
+
+
+/************ MEDIUM MEDIA QUERIES *************/
+
+@media(min-width:768px){
+  #nav-brand {
+    font-size: 1rem;
+  }
+  
+  #nav-links {
+    font-size: 1rem;
+  }
+
+  .main-header {
+    font-size: 6rem;
+  }
+
+  .main-content {
+    margin-top: 225px;
+  }
+
+  main .button-container {
+    display: flex;
+    justify-content: center;
+    width: 100vw;
+  }
+
+  div.item {
+    width: 45%; 
+  }
+  
+  .product-image {
+    width: 100%;
+    height: 300px;
+    margin: 0 auto;
+  }
+}
+
+/************ LARGE MEDIA QUERIES *************/
+
+@media(min-width:992px){
+  #nav-brand {
+    font-size: 1.75rem;
+  }
+  
+  #nav-links a {
+    padding-left: 30px;
+    font-size: 1.25rem;
+  }
+
+  .main-header {
+    font-size: 5rem;
+  }
+
+  .button {
+    margin-bottom: 15px;
+    font-size: 1.25rem;
+    width: 175px;
+  }
+
+  .main-content {
+    margin-top: 225px;
+  }
+
+  main .button-container {
+    padding-top: 20px;
+    display: flex;
+    justify-content: center;
+    width: 100vw;
+  }
+
+  div.item {
+    width: 45%; 
+  }
+  
+  .product-image {
+    width: 100%;
+    height: 300px;
+    margin: 0 auto;
+  }
+
+  .signup-page .form-container {
+    width: 65vw;
+    height: 570px;
+   }
+
+   .login-page .form-container {
+    width: 65vw;
+    height: 280px;
+   }
+
+   form input {
+    height: 40px;
+  }
+
+  .new-button {
+    width: 200px;
+  }
+
+}
+
+/************ EXTRA LARGE MEDIA QUERIES *************/
+
+@media(min-width:1200px){
+
+}

@@ -41,7 +41,7 @@ router.post('/edit', (req, res, next) => {
 
 // Delete product
 router.get('/delete', (req, res, next) => {
-  Product.deleteOne( { _id: req.query.product_id })
+  Product.deleteOne({ _id: req.query.product_id })
     .then(product => res.redirect('/profile'))
     .catch(err => console.log(err));
 });
