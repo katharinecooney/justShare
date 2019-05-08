@@ -7,6 +7,10 @@
     "start": "node ./bin/www",
     "seed": "node ./bin/providerSeeds"
   },
+  "engines": {
+    "node": "v11.14.0",
+    "npm": "6.7.0"
+  },
   "dependencies": {
     "bcrypt": "^3.0.6",
     "cloudinary": "^1.14.0",
