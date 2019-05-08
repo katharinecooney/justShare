@@ -16,6 +16,12 @@ const User = require('../models/user');
 const bcrypt = require('bcrypt');
 const bcryptSalt = 10;
 
+// About-page
+
+router.get('/about', (req, res, next) => {
+  res.render('passport/about');
+});
+
 // GET  '/logout'
 router.get('/logout', (req, res) => {
   req.logout();
