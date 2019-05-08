@@ -7,8 +7,7 @@ const productSchema = new Schema({
   description: String,
   allergens: String,
   time: String,
-  user: Schema.Types.ObjectId,
-  image: String
+  user: { type: Schema.Types.ObjectId, ref: 'User' },
 }, {
   timestamps: {
     createdAt: 'created_at',
