@@ -17,7 +17,7 @@ a {
 
 nav {
   height: 7vh;
-  min-height: 40px;
+  min-height: 50px;
   background-color:rgb(5, 223, 197);
   position: sticky;
   top: 0;
@@ -345,6 +345,7 @@ form p {
 
   .item {
     width: 90%; 
+    max-width: 400px;
   }
   
   .product-image {
@@ -382,6 +383,7 @@ form p {
 
   div.item {
     width: 45%; 
+    max-width: 400px;
   }
   
   .product-image {
@@ -426,6 +428,7 @@ form p {
 
   div.item {
     width: 45%; 
+    max-width: 400px;
   }
   
   .product-image {
