@@ -1,3 +1,26 @@
+<<<<<<< HEAD
+<h2>All Products</h2>
+
+<div id='map' style='width: 400px; height: 300px;'></div>
+
+<script>
+mapboxgl.accessToken = 'pk.eyJ1IjoiZ2lhbmZyYW5jb3IiLCJhIjoiY2p2ZGxqcGRlMGVlbzN6bzZlbnFwM3J5eiJ9.gNNdpYyAl_7ctY7fdhkraA';
+var map = new mapboxgl.Map({
+container: 'map',
+style: 'mapbox://styles/mapbox/streets-v11'
+});
+</script>
+
+{{#each allProductsFromDB}}
+  <h2>{{this.name}}</h2>
+  <img src="{{this.image}}" alt="">
+  <p>{{this.description}}</p>
+  <p>Allegens: {{this.allergens}}</p>
+  <h3>{{this.user.restaurant}}</h3>
+  <h3>{{this.user.neighborhood}}</h3>
+{{/each}}
+
+=======
 {{!-- <section class='showProducts'>
 	<div class='content'>
   <h2>PRODUCTS OF THE DAY</h2>
@@ -104,3 +127,4 @@
     {{/each}}
   </div>
  </div>
+>>>>>>> d6718b1a235afcc4caf3b6b8765bdc08b44568e5
