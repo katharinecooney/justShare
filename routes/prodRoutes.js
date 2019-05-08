@@ -50,14 +50,16 @@ router.get('/delete', (req, res, next) => {
 
 router.get('/', (req, res, next) => {
   Product.find()
-    .populate('user')    
-    .then((allProductsFromDB) => {console.log(allProductsFromDB) 
-      res.render('showProducts', { allProductsFromDB }) })
-      .catch((error) => console.log(error));
-          // .exec((err, data) => {
-          //   if(err) console.log('error', err);
-          //   else console.log('POPULATED', data);
-          // });
+    .populate('user')
+    .then((allProductsFromDB) => {
+ console.log(allProductsFromDB);
+      res.render('showProducts', { allProductsFromDB }); 
+})
+    .catch((error) => console.log(error));
+  // .exec((err, data) => {
+  //   if(err) console.log('error', err);
+  //   else console.log('POPULATED', data);
+  // });
 });
 
 // GET users listing
