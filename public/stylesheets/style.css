@@ -12,6 +12,9 @@ body {
 a {
   color: #00B7FF;
 }
+.form-container h2 {
+  margin: 0 0 5px 0;
+}
 
 /************************ NAVBAR *************************/
 
@@ -57,25 +60,31 @@ nav {
 #nav-links a {
   text-decoration: none;
   color: white;
-  padding-left: 10px;
+  margin-left: 10px;
+  padding-bottom: 5px;
+}
+
+#nav-links a:hover {
+  border-bottom: 2px solid white;
 }
 
 /************************ HOMEPAGE ************************/
 
 main {
   color: white;
-  height: 93vh;
+  min-height: 93vh;
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
   background: linear-gradient(rgba(2, 2, 0, 0.437), rgba(15, 19, 0, 0.401)), url('../images/bread.jpg') center / cover no-repeat;
 }
 
 .main-content {
-  margin-top: 200px;
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin-top: -60px;
 }
 
 .main-header {
@@ -83,11 +92,12 @@ main {
   color: rgb(255, 255, 255);
   font-family: 'Pacifico', cursive;
   font-weight: 100;
-  margin-bottom: 0;
+  margin: 0;
+  animation: tracking-in-contract 1.5s;
 }
 
 main .button-container {
-  margin-top: 20px;
+  padding-top: 40px;
 }
 
 .button {
@@ -102,6 +112,13 @@ main .button-container {
   margin: 0 15px;
   width: 125px;
   font-size: 1rem;
+  transition: all 0.8s;
+}
+
+main .button:hover {
+  color: rgb(5, 223, 197);
+  box-shadow: inset  0px 0px 0px 3px  rgb(5, 223, 197);
+  background-color: white;
 }
 
 /*********************** SIGNUP ************************/
@@ -116,10 +133,9 @@ main .button-container {
 
 .signup-page .form-container {
   border-radius: 15px;
-  padding: 15px 30px 30px 30px;
+  padding: 15px 25px;
   color: white;
   width: 65vw;
-  height: 490px;
   max-width: 600px;
   border: 3px solid rgb(5, 223, 197);
   background: rgba(5, 223, 197, .9); 
@@ -158,10 +174,9 @@ form p {
 
 .login-page .form-container {
   border-radius: 15px;
-  padding: 15px 30px 30px 30px;
+  padding: 15px 25px;
   color: white;
   width: 65vw;
-  height: 490px;
   max-width: 600px;
   border: 3px solid rgb(5, 223, 197);
   background: rgba(5, 223, 197, .9); 
@@ -175,33 +190,24 @@ form p {
   align-items: center;
 }
 
-.login-page .form-container {
-  height: 225px;
-}
-
 /******************* ADD NEW ITEM ********************/
 
 .new-page .form-container {
   border-radius: 15px;
-  padding: 15px 30px 30px 30px;
+  padding: 15px 25px;
   color: white;
   width: 65vw;
-  height: 490px;
   max-width: 600px;
   border: 3px solid rgb(5, 223, 197);
   background: rgba(5, 223, 197, .9); 
 }
 
 .new-page {
-  height: 93vh;
+  min-height: 93vh;
   background: linear-gradient(rgba(22, 22, 22, 0.5), rgba(66, 66, 66, 0.5)),url('../images/lettuce.jpg') center / cover no-repeat ;
   display: flex;
   justify-content: center;
   align-items: center;
-}
-
-.new-page .form-container {
-  height: 420px;
 }
 
 /********************** PROFILE ***********************/
@@ -216,6 +222,14 @@ form p {
   width: 180px;
   padding: 30px 40px;
   background-color: rgb(241, 128, 41);
+  transition: all 0.8s;
+}
+
+.new-button:hover {
+ color: rgb(241, 128, 41);
+ background-color: white;
+ box-shadow: inset  0px 0px 0px 3px  rgb(241, 128, 41);
+
 }
 
 .profile-page {
@@ -228,21 +242,18 @@ form p {
 .profile-page h3 {
   margin: 4px 0;
   font-size: 1.5rem;
+  text-transform: capitalize;
 }
 
 .profile-info {
   display: flex;
   flex-direction: column;
-  /* justify-content: center; */
   align-items: center;
-  /* height: 300px */
-
   padding-bottom: 80px;
 }
 
 .profile-products-container {
   background: rgba(221, 219, 219, 0.198);
-  /* margin-top: 80px; */
   padding-top: 20px;
 }
 
@@ -255,6 +266,7 @@ form p {
 
 .item {
   border: 1px solid rgb(241, 128, 41);
+  /* background-color: orange; */
   width: 30%;
   box-sizing: border-box;
   min-width: 300px; 
@@ -263,16 +275,20 @@ form p {
   margin-bottom: 20px;
   padding: 10px;
   text-align: center;
+  /* border-radius: 20% / 20%; */
 }
 
 .profile-products-heading {
   text-align: center;
+  text-transform: uppercase;
+  /* letter-spacing: 15px; */
 }
 
 .product-image {
   width: 95%;
   height: 200px;
   margin: 0 auto;
+  border-radius: 10% / 10%;
 }
 
 .profile-button-container {
@@ -292,11 +308,25 @@ form p {
 }
 
 .edit-button {
-  background-color: #05DFC5
+  background-color: #05DFC5;
+  transition: all 0.8s;
+}
+
+.edit-button:hover {
+  color: rgb(5, 223, 197);
+  box-shadow: inset  0px 0px 0px 3px  rgb(5, 223, 197);
+  background-color: white;
 }
 
 .delete-button {
-  background-color: #00AADD
+  background-color: #00AADD;
+  transition: all 0.8s;
+}
+
+.delete-button:hover {
+  color: #00AADD;
+  box-shadow: inset  0px 0px 0px 3px #00AADD;
+  background-color: white;
 }
 
 /********************* EDIT FORM **********************/
@@ -310,7 +340,13 @@ form p {
 }
 
 .edit-page .form-container {
-  height: 425px;
+  border-radius: 15px;
+  padding: 15px 25px;
+  color: white;
+  width: 65vw;
+  max-width: 600px;
+  border: 3px solid rgb(5, 223, 197);
+  background: rgba(5, 223, 197, .9); 
 }
 
 /************ EXTRA SMALL MEDIA QUERIES *************/
@@ -332,15 +368,12 @@ form p {
     margin-bottom: 15px;
   }
 
-  .main-content {
-    margin-top: 100px;
-  }
-
   main .button-container {
     display: flex;
     flex-direction: column;
     align-items: center;
     width: 100vw;
+    padding-top: 20px;
   }
 
   .item {
@@ -371,10 +404,6 @@ form p {
     font-size: 6rem;
   }
 
-  .main-content {
-    margin-top: 225px;
-  }
-
   main .button-container {
     display: flex;
     justify-content: center;
@@ -397,30 +426,25 @@ form p {
 
 @media(min-width:992px){
   #nav-brand {
-    font-size: 1.75rem;
+    font-size: 1.25rem;
   }
   
   #nav-links a {
     padding-left: 30px;
-    font-size: 1.25rem;
+    font-size: 1rem;
   }
 
-  .main-header {
+  /* .main-header {
     font-size: 5rem;
-  }
+  } */
 
-  .button {
+  /* .button {
     margin-bottom: 15px;
     font-size: 1.25rem;
     width: 175px;
-  }
-
-  .main-content {
-    margin-top: 225px;
-  }
+  } */
 
   main .button-container {
-    padding-top: 20px;
     display: flex;
     justify-content: center;
     width: 100vw;
@@ -439,12 +463,14 @@ form p {
 
   .signup-page .form-container {
     width: 65vw;
-    height: 570px;
    }
 
    .login-page .form-container {
     width: 65vw;
-    height: 280px;
+   }
+
+   .new-page .form-container {
+    width: 65vw;
    }
 
    form input {
@@ -454,11 +480,97 @@ form p {
   .new-button {
     width: 200px;
   }
-
 }
 
 /************ EXTRA LARGE MEDIA QUERIES *************/
 
 @media(min-width:1200px){
 
+}
+
+
+
+ @-webkit-keyframes slide-fwd-center {
+  0% {
+    -webkit-transform: translateZ(0);
+            transform: translateZ(0);
+  }
+  100% {
+    -webkit-transform: translateZ(160px);
+            transform: translateZ(160px);
+  }
+}
+@keyframes slide-fwd-center {
+  0% {
+    -webkit-transform: translateZ(0);
+            transform: translateZ(0);
+  }
+  100% {
+    -webkit-transform: translateZ(160px);
+            transform: translateZ(160px);
+  }
+}
+
+
+
+
+@-webkit-keyframes tracking-in-expand-fwd {
+  0% {
+    letter-spacing: -0.5em;
+    -webkit-transform: translateZ(-700px);
+            transform: translateZ(-700px);
+    opacity: 0;
+  }
+  40% {
+    opacity: 0.6;
+  }
+  100% {
+    -webkit-transform: translateZ(0);
+            transform: translateZ(0);
+    opacity: 1;
+  }
+}
+
+@keyframes tracking-in-expand-fwd {
+  0% {
+    letter-spacing: -0.5em;
+    -webkit-transform: translateZ(-700px);
+            transform: translateZ(-700px);
+    opacity: 0;
+  }
+  40% {
+    opacity: 0.6;
+  }
+  100% {
+    -webkit-transform: translateZ(0);
+            transform: translateZ(0);
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes tracking-in-contract {
+  0% {
+    letter-spacing: 1em;
+    opacity: 0;
+  }
+  40% {
+    opacity: 0.6;
+  }
+  100% {
+    letter-spacing: normal;
+    opacity: 1;
+  }
+}
+@keyframes tracking-in-contract {
+  0% {
+    letter-spacing: 1em;
+    opacity: 0;
+  }
+  40% {
+    opacity: 0.6;
+  }
+  100% {
+    letter-spacing: normal;
+    opacity: 1;
+  }
 }

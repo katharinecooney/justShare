@@ -89,13 +89,15 @@
     <div class="item">
       
       <img class="product-image" src="{{this.image}}">
-      <h3>{{this.name}}</h3>
+			<h3>Restaurant: {{this.user.restaurant}}</h3>
+      <span>{{this.name}}</span>
       <span>{{this.description}}</span>
       <span>Allergens: {{this.allergens}}</span>
-      <div class="profile-button-container">
+			
+      {{!-- <div class="profile-button-container">
         <a class="profile-button edit-button" href="/product/edit?product_id={{this._id}}">Edit</a>
         <a class="profile-button delete-button" href="/product/delete?product_id={{this._id}}">Delete</a>
-      </div>
+      </div> --}}
       
     </div>
       
