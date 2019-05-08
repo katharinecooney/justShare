@@ -1,7 +1,50 @@
-<h2>All Products</h2>
-{{#each allProductsFromDB}}
-  {{this.name}}
-  {{this.description}}
-  {{this.allergens}}
-  {{this.location}}
-{{/each}}
+<section class="display-page">
+
+{{!-- <div id='map' style='width: 400px; height: 300px;'></div> --}}
+
+{{!-- <script>
+mapboxgl.accessToken = 'pk.eyJ1IjoiZ2lhbmZyYW5jb3IiLCJhIjoiY2p2ZGxqcGRlMGVlbzN6bzZlbnFwM3J5eiJ9.gNNdpYyAl_7ctY7fdhkraA';
+var map = new mapboxgl.Map({
+container: 'map',
+style: 'mapbox://styles/mapbox/streets-v11'
+});
+</script> --}}
+
+{{!-- {{#each allProductsFromDB}}
+  <h2>{{this.name}}</h2>
+  <img src="{{this.image}}" alt="">
+  <p>{{this.description}}</p>
+  <p>Allegens: {{this.allergens}}</p>
+  <h3>{{this.user.restaurant}}</h3>
+  <h3>{{this.user.neighborhood}}</h3>
+{{/each}} --}}
+
+<div class="profile-products-container">
+<h1 class="profile-products-heading">View Available Products</h1>
+     <div class="profile-products">
+    {{#each allProductsFromDB}}
+    <div class="item">
+
+      <img class="product-image" src="{{this.image}}">
+      <h3>{{this.name}}</h3>
+			<span>{{this.user.restaurant}}</span>
+			<span>{{this.user.location}}</span>
+      <span>{{this.description}}</span>
+      <span>Allergens: {{this.allergens}}</span>
+      
+
+    </div>
+
+    {{/each}}
+  </div>
+ </div>
+ <div id='map' style='width: 100vw; height: 300px;'></div>
+<script>
+mapboxgl.accessToken = 'pk.eyJ1IjoiZ2lhbmZyYW5jb3IiLCJhIjoiY2p2ZGxqcGRlMGVlbzN6bzZlbnFwM3J5eiJ9.gNNdpYyAl_7ctY7fdhkraA';
+var map = new mapboxgl.Map({
+container: 'map',
+style: 'mapbox://styles/mapbox/streets-v11'
+});
+</script>
+</section>
+

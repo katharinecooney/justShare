@@ -3,10 +3,11 @@ const Schema = mongoose.Schema;
 
 const productSchema = new Schema({
   name: String,
+  image: String,
   description: String,
   allergens: String,
   time: String,
-  user: Schema.Types.ObjectId
+  user: { type: Schema.Types.ObjectId, ref: 'User' },
 }, {
   timestamps: {
     createdAt: 'created_at',
