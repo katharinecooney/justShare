@@ -65,7 +65,7 @@ nav {
 /************************ HOMEPAGE ************************/
 main {
   color: white;
-  min-height: 93vh;
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -110,7 +110,7 @@ main .button:hover {
 }
 /*********************** SIGNUP ************************/
 .signup-page {
-  height: 93vh;
+  height: 100vh;
   background: linear-gradient(rgba(22, 22, 22, 0.5), rgba(66, 66, 66, 0.5)),url('../images/markus-spiske-139525-unsplash.jpg') center / cover no-repeat ;
   display: flex;
   justify-content: center;
@@ -161,7 +161,7 @@ form p {
   background: rgba(5, 223, 197, .9); 
 }
 .login-page {
-  height: 93vh;
+  height: 100vh;
   background: linear-gradient(rgba(22, 22, 22, 0.5), rgba(66, 66, 66, 0.5)),url('../images/lettuce.jpg') center / cover no-repeat ;
   display: flex;
   justify-content: center;
@@ -285,9 +285,14 @@ form p {
 
 .profile-products-heading {
   text-align: center;
-  text-transform: uppercase;
+  /* letter-spacing: 3px; */
+  font-family: 'Pacifico', cursive;
+  font-size: 3rem;
+  margin-top: 0;
+  margin-bottom: 20px;
   /* letter-spacing: 15px; */
 }
+
 .product-image {
   width: 95%;
   height: 200px;
@@ -330,6 +335,10 @@ form p {
 
 /********************** ALL PRODUCTS ***********************/
 
+.display-page {
+  margin-top: 50px;
+}
+
 .available-item {
   color: white;
   font-size: .6rem;
@@ -363,6 +372,12 @@ form p {
 
 /************ EXTRA SMALL MEDIA QUERIES *************/
 @media(max-width:767px){
+  h1.profile-products-heading {
+    font-size: 1.5rem;
+    margin-top: 0;
+    margin-bottom: 20px;
+  }
+
   #nav-brand {
     font-size: .75rem;
   }
