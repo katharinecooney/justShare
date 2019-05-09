@@ -14,10 +14,10 @@ router.get('/new', (req, res, next) => {
 // Add new product
 
 router.post('/new', parser.single('image'), (req, res, next) => {
-  const { name, description, allergens, location, image } = req.body;
+  const { name, description, allergens, image } = req.body;
   const user = (req.user.id);
   console.log('user', user);
-  const newProduct = new Product({ name, description, allergens, location, image, user });
+  const newProduct = new Product({ name, description, allergens, image, user });
   newProduct.save()
     .then(product => res.redirect('/profile'))
     .catch(error => res.redirect('/new'));
@@ -32,7 +32,7 @@ router.get('/edit', (req, res, next) => {
 });
 
 router.post('/edit', (req, res, next) => {
-  const { name, description, allergens, location } = req.body;
+  const { name, description, allergens, image } = req.body;
 
   Product.update({ _id: req.query.product_id }, { $set: { name, description, allergens, location } }, { new: true })
     .then(product => res.redirect('/profile'))
@@ -56,10 +56,6 @@ router.get('/', (req, res, next) => {
       res.render('showProducts', { allProductsFromDB });
     })
     .catch((error) => console.log(error));
-  // .exec((err, data) => {
-  //   if(err) console.log('error', err);
-  //   else console.log('POPULATED', data);
-  // });
 });
 
 // GET users listing

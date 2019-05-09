@@ -1,6 +1,7 @@
 <section class="profile-page">
   <div class="profile-info">
     <h1 class="welcome-message">Welcome, {{user.username}}!</h1>
+    <h3>{{user.restaurant}}</h3>
     <a class="new-button button" href="/product/new">Add New Product</a>
   </div>
   
@@ -12,10 +13,7 @@
     <div class="item">
       
       <img class="product-image" src="{{this.image}}">
-
-			<h3>Restaurant: {{this.user.restaurant}}</h3>
-			<span>Address: {{this.user.address}}</span>	
-      <span>Available: {{this.description}}</span>
+      <h3>Available: {{this.description}}</h3>
       <span>Allergens: {{this.allergens}}</span>
       <div class="profile-button-container">
         <a class="profile-button edit-button" href="/product/edit?product_id={{this._id}}">Edit</a>
