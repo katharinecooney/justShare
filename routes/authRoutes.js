@@ -86,7 +86,7 @@ router.post('/signup', (req, res, next) => {
         if (err) {
           console.log('DB ERROR', err);
           res.render('passport/signup', { message: 'Something went wrong' });
-        } else res.redirect('/profile');
+        } else res.redirect('/login');
       });
     })
     .catch(error => next(error));

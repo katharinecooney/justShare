@@ -224,8 +224,9 @@ form p {
   padding: 0 10px;
 }
 .item {
-  border: 1px solid rgb(241, 128, 41);
-  /* background-color: orange; */
+  background: linear-gradient(to right top, #05dfc5, #00cfc2, #00bfbd, #00b0b5, #00a0ac);
+  opacity: .8;
+  border-radius: 10px;
   width: 30%;
   box-sizing: border-box;
   min-width: 300px; 
@@ -244,7 +245,7 @@ form p {
   width: 95%;
   height: 200px;
   margin: 0 auto;
-  border-radius: 10% / 10%;
+  border-radius: 10px;
 }
 .profile-button-container {
   display: flex;
@@ -367,7 +368,7 @@ form p {
   }
   
   #nav-links a {
-    padding-left: 30px;
+    margin-left: 30px;
     font-size: 1rem;
   }
   /* .main-header {
