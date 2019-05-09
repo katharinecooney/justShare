@@ -25,10 +25,16 @@ style: 'mapbox://styles/mapbox/streets-v11'
     {{#each allProductsFromDB}}
     <div class="item">
       <img class="product-image" src="{{this.image}}">
-			<h3>{{this.user.restaurant}}</h3>
-			<span>{{this.user.address}}</span>	
-      <span class="available-item">Available: {{this.description}}</span>
-      <span class="item-allergens">Allergens: {{this.allergens}}</span>
+
+      <div class="item-restaurant-info">
+        <h3>{{this.user.restaurant}}</h3>
+			  <span class="address">{{this.user.address}}</span>
+      </div>
+			<div class="item-info">
+        <span class="available-item">AVAILABLE: {{this.description}}</span>
+        <span class="item-allergens">ALLERGENS: {{this.allergens}}</span>
+      </div>	
+      
     </div>
 
     {{/each}}
