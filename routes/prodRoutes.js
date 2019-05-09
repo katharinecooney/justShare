@@ -14,10 +14,11 @@ router.get('/new', (req, res, next) => {
 // Add new product
 
 router.post('/new', parser.single('image'), (req, res, next) => {
-  const { name, description, allergens, image } = req.body;
+  const { name, description, allergens, location } = req.body;
+  const image = req.file.secure_url;
   const user = (req.user.id);
   console.log('user', user);
-  const newProduct = new Product({ name, description, allergens, image, user });
+  const newProduct = new Product({ name, description, allergens, location, image, user });
   newProduct.save()
     .then(product => res.redirect('/profile'))
     .catch(error => res.redirect('/new'));

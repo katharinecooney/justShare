@@ -3,11 +3,11 @@
   <section class="form-container">
     <h2>Sign Up!</h2>
     <form action="/signup" method="POST">
-      <input type="text" name="username" placeholder="Create a username">
+      <input type="text" name="username" placeholder="Create a username" required>
       <input type="text" name="restaurant" placeholder="Restaurant Name">
       <input type="email" name="email" placeholder="Email">
       <input type="text" name="address" placeholder="address">
-      <input type="password" name="password" placeholder="Password">
+      <input type="password" name="password" placeholder="Password" required>
      
       
       {{#if message}}
