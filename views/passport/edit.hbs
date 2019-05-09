@@ -1,18 +1,22 @@
 <section class="edit-page">
   <section class="form-container">
     <h1>Edit Product</h1>
-    <form action="/product/edit?product_id={{product._id}}" method="POST">
-      <label for="">name</label>
-      <input type="text" name="name" value="{{product.name}}">
+    <form action="/product/edit?product_id={{product._id}}" enctype="multipart/form-data"method="POST">
+    <label for="name">Restaurant</label>
+    <input type="text" name="restaurant" id="restaurant">
 
-      <label for="">description</label>
-      <input type="text" name="description" value="{{product.description}}">
+    <label for="name">Location</label>
+    <input type="text" name="location" id="location">
 
-      <label for="">allergens</label>
-      <input type="text" name="allergens" value="{{product.allergens}}">
 
-      <label for="">location</label>
-      <input type="text" name="location" value="{{product.location}}">
+    <label for="description">Description</label>
+    <input type="text" name="description" id="description">
+
+    <label for="">Allergens</label>
+    <input type="text" name="allergens" id="allergens">
+
+    <label for="image">Image</label>
+    <input type="file" name="image" id="name">
 
       <button class="form-button" type="submit">Edit product</button>
     </form>
