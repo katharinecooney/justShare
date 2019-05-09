@@ -294,6 +294,7 @@ form p {
   text-decoration: none;
   text-align: center;
   border-radius: 15px;
+  box-shadow: 2px 2px 3px rgba(240, 239, 239, 0.692);
 }
 .edit-button {
   background-color: #05DFC5;
