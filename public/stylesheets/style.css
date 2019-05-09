@@ -251,7 +251,7 @@ form p {
 }
 .item {
   background: linear-gradient(to right top, #05dfc5, #00cfc2, #00bfbd, #00b0b5, #00a0ac);
-  opacity: .7;
+  /* opacity: .7; */
   border-radius: 10px;
   width: 30%;
   box-sizing: border-box;
