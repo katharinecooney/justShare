@@ -1,7 +1,12 @@
 <section class="profile-page">
   <div class="profile-info">
     <h1 class="welcome-message">Welcome, {{user.username}}!</h1>
-    <h3 class="welcome-restaurant">{{user.restaurant}}</h3>
+    <div class="welcome-restaurant-container">
+      <img src="/images/dish.png" class="restaurant-logo">
+      <h3 class="welcome-restaurant">{{user.restaurant}}</h3>
+    </div>
+
+    
     <a class="new-button button" href="/product/new">Add New Product</a>
   </div>
   
