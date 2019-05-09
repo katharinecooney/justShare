@@ -27,8 +27,8 @@ style: 'mapbox://styles/mapbox/streets-v11'
       <img class="product-image" src="{{this.image}}">
 			<h3>{{this.user.restaurant}}</h3>
 			<span>{{this.user.address}}</span>	
-      <span>Available: {{this.description}}</span>
-      <span>Allergens: {{this.allergens}}</span>
+      <span class="available-item">Available: {{this.description}}</span>
+      <span class="item-allergens">Allergens: {{this.allergens}}</span>
     </div>
 
     {{/each}}

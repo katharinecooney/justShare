@@ -33,9 +33,9 @@ router.get('/edit', (req, res, next) => {
 });
 
 router.post('/edit', (req, res, next) => {
-  const { name, description, allergens, image } = req.body;
+  const { description, allergens, image } = req.body;
 
-  Product.update({ _id: req.query.product_id }, { $set: { name, description, allergens, location } }, { new: true })
+  Product.update({ _id: req.query.product_id }, { $set: { description, allergens, image } }, { new: true })
     .then(product => res.redirect('/profile'))
     .catch(error => console.log(error));
 });
